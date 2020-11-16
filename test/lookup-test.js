@@ -17,14 +17,14 @@ describe('The lookup function', function() {
 
 	});
 
-	it('find the .loaderrc.js file in the upper folder', async function() {
+	it('finds the .loaderrc.js file in the upper folder', async function() {
 
 		let file = await findConfig(path.join(__dirname, 'sub'));
 		expect(file).to.equal(path.join(__dirname, '.loaderrc.js'));
 
 	});
 
-	it('prioritzes .mjs over .js', async function() {
+	it('prioritizes .mjs over .js', async function() {
 
 		let file = await findConfig(path.join(__dirname, 'priority'));
 		expect(file).to.equal(path.join(__dirname, 'priority/.loaderrc.mjs'));

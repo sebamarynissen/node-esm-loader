@@ -6,7 +6,7 @@ const { expect } = chai;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-describe('Use the loader', function() {
+describe('Using the module', function() {
 
 	function dir(...args) {
 		return path.resolve(__dirname, ...args);
@@ -17,7 +17,7 @@ describe('Use the loader', function() {
 		test.slow(1000);
 	});
 
-	it('uses vue-esm-loader', async function() {
+	it('uses the vue-esm-loader', async function() {
 
 		let out = await run('./vue-test.js', [], {
 			cwd: dir('vue'),
