@@ -1,0 +1,23 @@
+{
+  "name": "node-esm-loader",
+  "version": "0.0.1-alpha",
+  "description": "A webpack-like loader for Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebamarynissen/node-esm-loader.git"
+  },
+  "keywords": [
+    "loader",
+    "esm"
+  ],
+  "author": "Sebastiaan Marynissen <sebastiaan.marynissen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebamarynissen/node-esm-loader/issues"
+  },
+  "homepage": "https://github.com/sebamarynissen/node-esm-loader#readme"
+}
