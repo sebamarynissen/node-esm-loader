@@ -1,3 +1,1 @@
-export default [
-	'vue-esm-loader',
-];
+export default {};
