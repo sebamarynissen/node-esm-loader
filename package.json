@@ -27,11 +27,13 @@
   "dependencies": {
     "create-esm-loader": "0.0.1-alpha.0",
     "find-up": "^5.0.0",
-    "yargs": "^16.1.1"
+    "yargs": "^17.2.1"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
-    "vue-esm-loader": "0.0.1-alpha.2"
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "vue": "^2.6.14",
+    "vue-esm-loader": "0.0.1-alpha.4",
+    "vue-template-compiler": "^2.6.14"
   }
 }
