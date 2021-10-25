@@ -1,6 +1,6 @@
-import chai from 'chai';
+import { expect } from 'chai';
 import Component from './component.vue';
 
-chai.expect(Component.data()).to.eql({
+expect(Component.data()).to.eql({
 	foo: 'bar',
 });

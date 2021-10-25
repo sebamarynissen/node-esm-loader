@@ -1,4 +1,4 @@
-import cp from 'child_process';
+import cp from 'node:child_process';
 
 export default function run(file, args = [], opts = {}) {
 	let mem = [];
