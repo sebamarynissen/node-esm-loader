@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/sebamarynissen/node-esm-loader#readme",
   "dependencies": {
-    "create-esm-loader": "0.0.1-alpha.0",
+    "create-esm-loader": "0.0.1",
     "find-up": "^5.0.0",
     "yargs": "^17.2.1"
   },
