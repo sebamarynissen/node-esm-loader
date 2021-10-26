@@ -1,6 +1,6 @@
 {
   "name": "node-esm-loader",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1",
   "description": "A webpack-like loader for Node",
   "main": "./lib/loader.js",
   "type": "module",
