@@ -61,3 +61,9 @@ module.exports = {
 ```
 
 For more info on what the loaders configuration should look like, have a look at [create-esm-loader](https://www.npmjs.com/package/create-esm-loader).
+
+## Compatible Loaders
+
+You can find a [list of compatible loaders][loaderlist], here:
+
+[loaderlist]: https://www.npmjs.com/package/create-esm-loader?activeTab=dependents
