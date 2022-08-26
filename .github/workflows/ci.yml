@@ -3,8 +3,6 @@ name: CI
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '0 0 * * 0'
 
 jobs:
   test-node:
@@ -12,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14, 16, 17]
+        node-version: [14, 16, 18]
 
     steps:
       - uses: actions/checkout@v2
