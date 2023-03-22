@@ -40,6 +40,10 @@ export default {
   loaders: [
     'vue-esm-loader',
     {
+      use: /\.(png|gif|jpe?g)$/,
+      type: 'asset/resource',
+    },
+    {
       transform(source, opts) {
         return { source: someTransformation(String(source)) };
       }
