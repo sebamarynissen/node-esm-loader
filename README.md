@@ -40,7 +40,7 @@ export default {
   loaders: [
     'vue-esm-loader',
     {
-      use: /\.(png|gif|jpe?g)$/,
+      test: /\.(png|gif|jpe?g)$/,
       type: 'asset/resource',
     },
     {
