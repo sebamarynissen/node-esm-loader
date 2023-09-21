@@ -23,7 +23,7 @@ This will - hopefully - eliminate the need to reconfigure your loaders when the 
 
 ## Installation
 
-```npm install node-esm-loader```
+```npm install --save-dev node-esm-loader```
 
 ## Usage
 
@@ -31,6 +31,16 @@ This will - hopefully - eliminate the need to reconfigure your loaders when the 
 You can use it by running Node as
 ```
 node --experimental-loader=node-esm-loader ./your/file.js
+```
+On Node `>=20.7` however, [it is discouraged](https://nodejs.org/dist/latest-v20.x/docs/api/cli.html#--experimental-loadermodule) to use the `--experimental-loader` flag and instead the `--import` flag should be used in combination with `register()` from `node:module`
+```js
+import { register } from 'node:module';
+register('node-esm-loader', import.meta.url);
+```
+or make it easy on yourself and just use
+```sh
+# Preferred pattern on Node >=20.7
+node --import=node-esm-loader/register ./your/file.js
 ```
 
 `node-esm-loader` loader will subsequently look for a `.loaderrc.mjs` or `.loaderrc.js` file that exports the configuration.
@@ -53,14 +63,21 @@ export default {
 ```
 
 Alternatively you can run node with an additional flag that specifies the path to your loader configuration
-```
+```sh
 node --experimental-loader=node-esm-loader ./your/file.js --loader-config=./path/to/config.js
+
+# On Node >=20.7
+node --import=node-esm-loader/register ./your/file.js --loader-config=./path/to/config.js
 ```
 
 When using this with mocha, create a `.mocharc.cjs` file that looks like this:
 ```js
 module.exports = {
   'experimental-loader': 'node-esm-loader',
+
+  // On Node 20.7
+  import: 'node-esm-loader/register',
+
 };
 ```
 
