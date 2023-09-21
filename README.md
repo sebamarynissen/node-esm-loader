@@ -54,7 +54,7 @@ export default {
 
 Alternatively you can run node with an additional flag that specifies the path to your loader configuration
 ```
-node --experimental-loader=node-esm-loader --loader-config=./path/to/config.js ./your.file.js
+node --experimental-loader=node-esm-loader ./your/file.js --loader-config=./path/to/config.js
 ```
 
 When using this with mocha, create a `.mocharc.cjs` file that looks like this:

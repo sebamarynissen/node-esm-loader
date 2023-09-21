@@ -5,7 +5,8 @@
   "main": "./lib/loader.js",
   "type": "module",
   "exports": {
-    ".": "./lib/loader.js"
+    ".": "./lib/loader.js",
+    "./register": "./lib/register.js"
   },
   "scripts": {
     "test": "mocha"
@@ -32,6 +33,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^10.2.0",
+    "semver": "^7.5.4",
     "vue": "^2.6.14",
     "vue-esm-loader": "0.0.2",
     "vue-template-compiler": "^2.6.14"
