@@ -27,7 +27,9 @@ import { register } from 'node:module';
 register('node-esm-loader', import.meta.url, {
 
   // Optional, will use the default .loaderrc.js config file if present
-  loaderConfig: './path/to/config.js',
+  data: {
+    loaderConfig: './path/to/config.js',
+  },
 
 });
 ```
