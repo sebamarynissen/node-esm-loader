@@ -37,7 +37,9 @@ and then run Node as
 ```
 node --import=./register.js ./your/file.js
 ```
-For more info about this, see https://nodejs.org/api/module.html#customization-hooks
+For more info about this, see https://nodejs.org/api/module.html#customization-hooks.
+Note: since version 0.3.0, either Node >=18.19 or >=20.6 is required.
+Support for lower Node version has been dropped.
 
 `node-esm-loader` loader will subsequently look for a configuration file in various places using [cosmiconfig](https://www.npmjs.com/package/cosmiconfig), where it also looks up the directory tree.
 My advice is to either use `.loaderrc.js`, or use a `.config` folder with `.config/loaderrc.js`, but `loader.config.js` will also work.
