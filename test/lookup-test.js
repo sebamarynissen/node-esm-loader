@@ -34,6 +34,13 @@ describe('The lookup function', function() {
 
 	});
 
+	it('supports *.config.js files', async function() {
+
+		let file = await find('dot-config');
+		expect(file).to.equal(path.join(__dirname, 'dot-config/loader.config.js'));
+
+	});
+
 	it('supports .config folders', async function() {
 
 		let file = await find('config-folder');
