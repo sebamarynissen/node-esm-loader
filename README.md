@@ -26,7 +26,7 @@ Or you can use the JavaScript api
 import { register } from 'node:module';
 register('node-esm-loader', import.meta.url, {
 
-  // Optional, will use the default .loaderrc.js config file if present
+  // Optional, will search for a configuration file automatically if not specified
   data: {
     loaderConfig: './path/to/config.js',
   },
@@ -39,9 +39,10 @@ node --import=./register.js ./your/file.js
 ```
 For more info about this, see https://nodejs.org/api/module.html#customization-hooks
 
-`node-esm-loader` loader will subsequently look for a `.loaderrc.mjs` or `.loaderrc.js` file that exports the configuration.
-This file can look something like this:
+`node-esm-loader` loader will subsequently look for a configuration file in various places using [cosmiconfig](https://www.npmjs.com/package/cosmiconfig), where it also looks up the directory tree.
+My advice is to either use `.loaderrc.js`, or use a `.config` folder with `.config/loaderrc.js`, but `loader.config.js` will also work.
 ```js
+// .loaderrc.js, loader.config.js or .config/loaderrc.js
 export default {
   loaders: [
     'vue-esm-loader',
@@ -57,8 +58,9 @@ export default {
   ],
 };
 ```
+For more info on what the loaders configuration should look like, have a look at [create-esm-loader](https://www.npmjs.com/package/create-esm-loader).
 
-If you want to store the loader config in a different file, you can use
+If you want to put the loader config in a different file, you can use
 ```
 node --import=node-esm-loader/register ./your-file.js --loader-config=./path/to/config.js
 ```
@@ -69,8 +71,6 @@ module.exports = {
   import: 'node-esm-loader/register',
 };
 ```
-
-For more info on what the loaders configuration should look like, have a look at [create-esm-loader](https://www.npmjs.com/package/create-esm-loader).
 
 ## Compatible Loaders
 

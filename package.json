@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/sebamarynissen/node-esm-loader#readme",
   "dependencies": {
+    "cosmiconfig": "^9.0.0",
     "create-esm-loader": "^0.2.4",
     "find-up": "^5.0.0",
     "yargs": "^17.2.1"
